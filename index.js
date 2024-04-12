@@ -1,5 +1,11 @@
 fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=;hjksdf;kljsdfgl;kdsjfgljksdfglkjhsdfg")
-    .then(res => res.json())
+    .then ( res=> {
+        if (!res.ok) {
+            throw Error("Something went wrong");
+        }
+        return res.json()
+
+    })
     .then(data => {
         console.log(data)
         throw Error("I'm an error!")
@@ -13,4 +19,3 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
     })
 
 
-    
