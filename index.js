@@ -16,6 +16,8 @@ fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&que
         console.log("Something went wrong! 😭")
         // This is where I can handle the error
         // Choose to use a default background image
+        return fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=sky")
+        
     })
 
 
